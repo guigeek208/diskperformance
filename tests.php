@@ -24,7 +24,7 @@ if ($type == "Read") {
 	echo "</dl>";
 	echo '</div>';
 	echo '</div>';
-	fwrite($file, $results['target'].";".$results['size'].";".$results['speed']."\n");
+	fwrite($file, $results['target'].";".$type.";".$results['size'].";".$results['speed']."\n");
 }
 
 if ($type == "Write") {
@@ -42,7 +42,7 @@ if ($type == "Write") {
 	echo "</dl>";
 	echo '</div>';
 	echo '</div>';
-	fwrite($file, $target.";".$results['size'].";".$results['speed']."\n");
+	fwrite($file, $target.";".$type.";".$results['size'].";".$results['speed']."\n");
 	fclose($file);
 }
 
@@ -61,7 +61,7 @@ if ($type == "Read/Write") {
 	echo "</dl>";
 	echo '</div>';
 	echo '</div>';
-	fwrite($file, $target.";".$results['size'].";".$results['speed']."\n");
+	fwrite($file, $target.";".$type.";".$results['size'].";".$results['speed']."\n");
 	
 	echo '<div class="panel panel-default">';
 	echo '<div class="panel-heading"><h4>Read Results</h4></div>';
@@ -77,7 +77,7 @@ if ($type == "Read/Write") {
 	echo "</dl>";
 	echo '</div>';
 	echo '</div>';
-	fwrite($file, $results['target'].";".$results['size'].";".$results['speed']."\n");
+	fwrite($file, $results['target'].";".$type.";".$results['size'].";".$results['speed']."\n");
 }
 
 fclose($file);

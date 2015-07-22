@@ -66,7 +66,7 @@
 	    <div class="col-md-4 col-md-offset-4" id="history">
 	    <h2>History</h2>
 	    <table class="table table-striped table-condensed table-bordered">
-	    	<th>Date</th><th>Type</th><th>Size</th><th>Speed</th>
+	    	<th>Date</th><th>Target</th><th>Type</th><th>Size</th><th>Speed</th>
 	    	<?php
 	    	$dir = 'log';
 			$files = scandir($dir, 1);
@@ -82,8 +82,9 @@
 		    				echo "<tr>";
 		    				echo "<td>".$matches[1]."</td>";
 		    				echo "<td>$infos[0]</td>";
-			    			echo "<td>$infos[1]</td>";
+		    				echo "<td>$infos[1]</td>";
 			    			echo "<td>$infos[2]</td>";
+			    			echo "<td>$infos[3]</td>";
 		    				echo "</tr>";
 		    			}
 	    			}
